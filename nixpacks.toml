@@ -10,9 +10,12 @@ nixPkgs = [
   "php83Extensions.openssl",
   "php83Extensions.curl",
   "php83Extensions.json",
-  "php83Extensions.session"
+  "mysql",
 ]
 
+[phases.build]
+cmds = ["chmod +x /app/start.sh"]
+
 [start]
-# Railway akan menyuntikkan $PORT secara otomatis
-cmd = "php -S 0.0.0.0:$PORT -t ."
+# start.sh: tunggu DB siap → import database.sql jika belum ada → jalankan PHP server
+cmd = "sh /app/start.sh"
