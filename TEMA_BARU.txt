@@ -1,0 +1,5 @@
+TK PERTIWI - DESAIN BARU
+Tema: Ceria Modern Hangat
+Warna utama: Teal, Sky Blue, Coral, Lavender, Mustard, Cream.
+Tidak menggunakan pelangi.
+Seluruh fungsi PHP/database dipertahankan; perubahan difokuskan pada tampilan.

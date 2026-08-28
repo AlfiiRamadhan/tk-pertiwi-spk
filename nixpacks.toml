@@ -1,0 +1,18 @@
+# Konfigurasi Nixpacks untuk Railway
+# Railway akan otomatis mendeteksi ini dan membangun PHP environment yang sesuai
+
+[phases.setup]
+nixPkgs = [
+  "php83",
+  "php83Extensions.pdo",
+  "php83Extensions.pdo_mysql",
+  "php83Extensions.mbstring",
+  "php83Extensions.openssl",
+  "php83Extensions.curl",
+  "php83Extensions.json",
+  "php83Extensions.session"
+]
+
+[start]
+# Railway akan menyuntikkan $PORT secara otomatis
+cmd = "php -S 0.0.0.0:$PORT -t ."

@@ -1,0 +1,103 @@
+
+:root{
+ --tk-teal:#6f9298;
+ --tk-teal-dark:#55777e;
+ --tk-sage:#a9c3bd;
+ --tk-cream:#fbfaf6;
+ --tk-peach:#e1b096;
+ --tk-yellow:#ead9a6;
+ --tk-text:#39484d;
+ --tk-muted:#7c898d;
+ --tk-white:#ffffff;
+ --tk-line:#e5e9e7;
+}
+body.tk-theme{
+ background:var(--tk-cream);
+ color:var(--tk-text);
+ font-family:"Segoe UI",Arial,sans-serif;
+}
+.tk-soft-bg{
+ background:
+ radial-gradient(circle at 8% 12%, rgba(169,195,189,.18) 0 55px, transparent 56px),
+ radial-gradient(circle at 92% 18%, rgba(225,176,150,.14) 0 70px, transparent 71px),
+ radial-gradient(circle at 15% 88%, rgba(234,217,166,.15) 0 65px, transparent 66px),
+ var(--tk-cream);
+}
+.tk-login{
+ min-height:100vh;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ padding:30px 18px;
+ position:relative;
+ overflow:hidden;
+}
+.tk-login::before,.tk-login::after{
+ content:"";
+ position:absolute;
+ border-radius:50%;
+ opacity:.5;
+}
+.tk-login::before{width:220px;height:220px;background:#e8f1ee;left:-90px;top:-70px}
+.tk-login::after{width:260px;height:260px;background:#f4e7df;right:-100px;bottom:-100px}
+.tk-login-card{
+ width:100%;
+ max-width:930px;
+ background:rgba(255,255,255,.96);
+ border:1px solid var(--tk-line);
+ border-radius:24px;
+ box-shadow:0 16px 45px rgba(74,92,96,.12);
+ overflow:hidden;
+ position:relative;
+ z-index:1;
+}
+.tk-login-side{
+ min-height:480px;
+ background:linear-gradient(145deg,#6f9298,#8eaaac);
+ color:#fff;
+ padding:48px 38px;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ position:relative;
+ overflow:hidden;
+}
+.tk-login-side::after{
+ content:"";
+ position:absolute;
+ width:210px;height:210px;
+ border-radius:50%;
+ background:rgba(255,255,255,.10);
+ right:-80px;top:-70px;
+}
+.tk-login-icon{
+ width:72px;height:72px;
+ border-radius:20px;
+ background:rgba(255,255,255,.18);
+ display:flex;align-items:center;justify-content:center;
+ font-size:32px;margin-bottom:22px;
+}
+.tk-login-form{padding:48px 42px}
+.tk-brand-small{color:var(--tk-teal-dark);font-weight:700;letter-spacing:.3px}
+.tk-btn{
+ background:var(--tk-teal-dark);
+ border-color:var(--tk-teal-dark);
+ color:#fff;
+ border-radius:10px;
+ padding:11px 16px;
+ font-weight:600;
+}
+.tk-btn:hover{background:#48686f;border-color:#48686f;color:#fff}
+.tk-input{
+ border:1px solid #dfe6e4;
+ border-radius:10px;
+ padding:11px 13px;
+}
+.tk-input:focus{
+ border-color:#9ab4b4;
+ box-shadow:0 0 0 .2rem rgba(111,146,152,.12);
+}
+.tk-footer-note{color:var(--tk-muted);font-size:12px;margin-top:18px}
+.tk-page-blob{
+ position:absolute;border-radius:50%;pointer-events:none;
+}

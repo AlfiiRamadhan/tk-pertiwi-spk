@@ -1,0 +1,165 @@
+
+/* =====================================================
+   BACKGROUND TK PERTIWI - CERIA TANPA PELANGI
+   Biru langit + awan + bintang + bunga pastel
+   ===================================================== */
+
+:root{
+ --sky:#dff1fb;
+ --sky2:#cfe9f7;
+ --cloud:#ffffff;
+ --blue:#6d9dcc;
+ --lav:#a69ad0;
+ --peach:#efb09a;
+ --yellow:#ead58d;
+ --mint:#a5c9bd;
+}
+
+/* Latar utama */
+body.tk-theme{
+ background:
+   radial-gradient(circle at 7% 14%, rgba(255,255,255,.80) 0 42px, transparent 43px),
+   radial-gradient(circle at 11% 12%, rgba(255,255,255,.70) 0 28px, transparent 29px),
+   radial-gradient(circle at 92% 10%, rgba(255,255,255,.72) 0 48px, transparent 49px),
+   radial-gradient(circle at 86% 14%, rgba(255,255,255,.60) 0 30px, transparent 31px),
+   radial-gradient(circle at 5% 91%, rgba(239,176,154,.16) 0 70px, transparent 71px),
+   radial-gradient(circle at 95% 87%, rgba(166,154,208,.16) 0 82px, transparent 83px),
+   linear-gradient(145deg,var(--sky) 0%,#edf7fb 48%,#f9f4f0 100%) !important;
+}
+
+/* Dekorasi awan untuk area halaman */
+.main{
+ position:relative;
+ overflow:hidden;
+}
+.main:before{
+ content:"";
+ position:absolute;
+ width:150px;
+ height:65px;
+ right:35px;
+ top:22px;
+ border-radius:60px;
+ background:rgba(255,255,255,.58);
+ box-shadow:
+   -42px 13px 0 -4px rgba(255,255,255,.50),
+   38px 10px 0 -8px rgba(255,255,255,.48);
+ pointer-events:none;
+}
+.main:after{
+ content:"✦   ✧        ✦";
+ position:absolute;
+ right:80px;
+ top:105px;
+ color:rgba(166,154,208,.38);
+ font-size:15px;
+ letter-spacing:18px;
+ pointer-events:none;
+}
+
+/* Sidebar tetap bersih, tetapi diberi aksen langit */
+.sidebar{
+ background:
+   radial-gradient(circle at 10% 8%,rgba(109,157,204,.08) 0 55px,transparent 56px),
+   linear-gradient(180deg,#ffffff 0%,#f7fbfd 100%) !important;
+}
+
+/* Header dengan strip warna lembut */
+.topbar{
+ background:rgba(255,255,255,.93)!important;
+ border-top:4px solid transparent!important;
+ border-image:linear-gradient(90deg,var(--blue),var(--lav),var(--peach),var(--yellow)) 1;
+}
+
+/* Dashboard hero */
+.card.dashboard-hero{
+ background:
+   radial-gradient(circle at 87% 20%,rgba(255,255,255,.17) 0 55px,transparent 56px),
+   radial-gradient(circle at 76% 85%,rgba(255,224,150,.16) 0 45px,transparent 46px),
+   linear-gradient(135deg,#72a7d1,#8799ce 62%,#a396ca) !important;
+ color:#fff !important;
+}
+.card.dashboard-hero .text-muted,
+.card.dashboard-hero .opacity-75{
+ color:rgba(255,255,255,.88) !important;
+}
+.card.dashboard-hero h2{
+ color:#fff !important;
+}
+
+/* Card sedikit menyatu dengan background */
+.card{
+ background:rgba(255,255,255,.96)!important;
+}
+
+/* Card statistik lebih ceria */
+.stat-card:nth-child(1){border-top:4px solid var(--blue)!important}
+.stat-card:nth-child(2){border-top:4px solid var(--mint)!important}
+.stat-card:nth-child(3){border-top:4px solid var(--lav)!important}
+.stat-card:nth-child(4){border-top:4px solid var(--peach)!important}
+
+/* Badge dekoratif */
+.module-chip{
+ box-shadow:0 3px 8px rgba(80,90,100,.05);
+}
+
+/* Login background */
+.tk-login{
+ background:
+   radial-gradient(circle at 10% 18%,rgba(255,255,255,.72) 0 48px,transparent 49px),
+   radial-gradient(circle at 15% 14%,rgba(255,255,255,.58) 0 28px,transparent 29px),
+   radial-gradient(circle at 92% 15%,rgba(255,255,255,.68) 0 55px,transparent 56px),
+   radial-gradient(circle at 82% 88%,rgba(239,176,154,.18) 0 80px,transparent 81px),
+   linear-gradient(145deg,#dff1fb,#eef7fb 48%,#f8eee9) !important;
+}
+.tk-login:before{
+ width:210px!important;
+ height:210px!important;
+ background:rgba(166,154,208,.14)!important;
+}
+.tk-login:after{
+ width:260px!important;
+ height:260px!important;
+ background:rgba(239,176,154,.13)!important;
+}
+
+/* Ornamen bintang hanya kecil, tidak seperti pelangi */
+.tk-login-card:before{
+ content:"✦   ✧   ★";
+ position:absolute;
+ right:28px;
+ top:20px;
+ color:rgba(234,213,141,.62);
+ font-size:17px;
+ letter-spacing:7px;
+}
+
+/* Form card tetap nyaman dibaca */
+.tk-login-card{
+ background:rgba(255,255,255,.97)!important;
+ box-shadow:0 18px 48px rgba(82,120,145,.14)!important;
+}
+
+/* Header login kiri */
+.tk-login-side{
+ background:
+   radial-gradient(circle at 88% 12%,rgba(255,255,255,.16) 0 55px,transparent 56px),
+   linear-gradient(145deg,#6f9fca,#9298cb) !important;
+}
+
+/* Footer */
+.footer{
+ background:rgba(255,255,255,.45);
+}
+
+
+/* FINAL DASHBOARD HERO OVERRIDE */
+.card.dashboard-hero{
+ background:linear-gradient(135deg,#72a7d1 0%,#8799ce 62%,#a396ca 100%) !important;
+ color:#fff !important;
+ min-height:245px;
+}
+.card.dashboard-hero .card-body{position:relative;z-index:2}
+.card.dashboard-hero h2,
+.card.dashboard-hero .small,
+.card.dashboard-hero p{color:#fff !important}

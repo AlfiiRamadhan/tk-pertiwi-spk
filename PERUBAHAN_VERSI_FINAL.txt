@@ -1,0 +1,48 @@
+PERUBAHAN PROGRAM SAW - VERSI FINAL
+===================================
+
+1. Nilai awal C1-C6 tetap menggunakan:
+   1 = BB, 2 = MB, 3 = BSH, 4 = BSB.
+
+2. Nilai akhir SAW tidak lagi dikonversi menjadi BB/MB/BSH/BSB.
+   Hasil akhir SAW hanya berupa:
+   - Nilai Preferensi
+   - Ranking
+
+3. Kolom/status perkembangan hasil SAW dihapus dari:
+   - Proses SAW
+   - Hasil/Riwayat SAW
+   - Laporan per kelas
+   - Laporan per anak
+   - Struktur tabel hasil_saw
+
+4. Laporan per anak sekarang wajib memilih bulan dan tahun.
+   Nilai serta normalisasi dihitung hanya dari periode yang dipilih.
+
+5. Laporan per kelas menampilkan BB/MB/BSH/BSB pada C1-C6,
+   sedangkan kolom akhir hanya Nilai SAW dan Ranking.
+
+6. database.sql diperbaiki:
+   - tabel penilaian langsung memiliki kolom bulan dan tahun;
+   - unique key menjadi per anak + kriteria + bulan + tahun;
+   - komentar nilai diselaraskan ke BB/MB/BSH/BSB;
+   - proses_saw menyimpan bulan dan tahun;
+   - hasil_saw tidak memiliki status_perkembangan.
+
+7. Proses SAW sekarang menyimpan periode bulan/tahun ke riwayat.
+
+8. Bug jumlah anak pada proses SAW diperbaiki agar anak tanpa kelas
+   tidak terhitung dua kali.
+
+9. File migrasi yang bertentangan dengan konsep akhir dihapus:
+   - update_penilaian_muncul.sql
+   - update_penilaian_skala_baik.sql
+   - tmp_sql.sql
+
+10. Ditambahkan MIGRASI_FINAL_SAW.sql untuk database dari versi program
+    yang dikirim sebelum perubahan ini.
+
+CATATAN:
+- Instalasi baru: import database.sql.
+- Jika database lama masih digunakan, backup database terlebih dahulu,
+  lalu jalankan MIGRASI_FINAL_SAW.sql sesuai petunjuk di dalam file.
