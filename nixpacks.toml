@@ -1,5 +1,4 @@
 # Konfigurasi Nixpacks untuk Railway
-# Railway akan otomatis mendeteksi ini dan membangun PHP environment yang sesuai
 
 [phases.setup]
 nixPkgs = [
@@ -9,13 +8,11 @@ nixPkgs = [
   "php83Extensions.mbstring",
   "php83Extensions.openssl",
   "php83Extensions.curl",
-  "php83Extensions.json",
-  "mysql",
 ]
 
 [phases.build]
 cmds = ["chmod +x /app/start.sh"]
 
 [start]
-# start.sh: tunggu DB siap → import database.sql jika belum ada → jalankan PHP server
 cmd = "sh /app/start.sh"
+
